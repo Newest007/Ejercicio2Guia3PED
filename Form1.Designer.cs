@@ -42,7 +42,7 @@ namespace Ejercicio_2_Guía_3
             this.timerCajero1Eliminar = new System.Windows.Forms.Timer(this.components);
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnQuitarCliente = new System.Windows.Forms.Button();
+            this.btnDespachar1 = new System.Windows.Forms.Button();
             this.btnHacerFila2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timerCajero2Mover = new System.Windows.Forms.Timer(this.components);
@@ -52,6 +52,7 @@ namespace Ejercicio_2_Guía_3
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnDespachar2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -175,19 +176,19 @@ namespace Ejercicio_2_Guía_3
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             // 
-            // btnQuitarCliente
+            // btnDespachar1
             // 
-            this.btnQuitarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(15)))), ((int)(((byte)(29)))));
-            this.btnQuitarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnQuitarCliente.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnQuitarCliente.Location = new System.Drawing.Point(28, 68);
-            this.btnQuitarCliente.Name = "btnQuitarCliente";
-            this.btnQuitarCliente.Size = new System.Drawing.Size(132, 37);
-            this.btnQuitarCliente.TabIndex = 13;
-            this.btnQuitarCliente.Text = "Despachar";
-            this.btnQuitarCliente.UseVisualStyleBackColor = false;
-            this.btnQuitarCliente.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnDespachar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(15)))), ((int)(((byte)(29)))));
+            this.btnDespachar1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDespachar1.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDespachar1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDespachar1.Location = new System.Drawing.Point(28, 68);
+            this.btnDespachar1.Name = "btnDespachar1";
+            this.btnDespachar1.Size = new System.Drawing.Size(132, 37);
+            this.btnDespachar1.TabIndex = 13;
+            this.btnDespachar1.Text = "Despachar";
+            this.btnDespachar1.UseVisualStyleBackColor = false;
+            this.btnDespachar1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnHacerFila2
             // 
@@ -222,6 +223,7 @@ namespace Ejercicio_2_Guía_3
             // timerCajero2Eliminar
             // 
             this.timerCajero2Eliminar.Interval = 10;
+            this.timerCajero2Eliminar.Tick += new System.EventHandler(this.timerCajero2Eliminar_Tick);
             // 
             // pictureBox10
             // 
@@ -276,11 +278,26 @@ namespace Ejercicio_2_Guía_3
             this.pictureBox6.TabIndex = 17;
             this.pictureBox6.TabStop = false;
             // 
+            // btnDespachar2
+            // 
+            this.btnDespachar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(15)))), ((int)(((byte)(29)))));
+            this.btnDespachar2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDespachar2.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDespachar2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDespachar2.Location = new System.Drawing.Point(203, 68);
+            this.btnDespachar2.Name = "btnDespachar2";
+            this.btnDespachar2.Size = new System.Drawing.Size(132, 37);
+            this.btnDespachar2.TabIndex = 22;
+            this.btnDespachar2.Text = "Despachar";
+            this.btnDespachar2.UseVisualStyleBackColor = false;
+            this.btnDespachar2.Click += new System.EventHandler(this.button1_Click_3);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 453);
+            this.Controls.Add(this.btnDespachar2);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -289,7 +306,7 @@ namespace Ejercicio_2_Guía_3
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnHacerFila2);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.btnQuitarCliente);
+            this.Controls.Add(this.btnDespachar1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -334,7 +351,7 @@ namespace Ejercicio_2_Guía_3
         private System.Windows.Forms.Timer timerCajero1Eliminar;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button btnQuitarCliente;
+        private System.Windows.Forms.Button btnDespachar1;
         private System.Windows.Forms.Button btnHacerFila2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timerCajero2Mover;
@@ -344,6 +361,7 @@ namespace Ejercicio_2_Guía_3
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button btnDespachar2;
     }
 }
 

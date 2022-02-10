@@ -84,7 +84,7 @@ namespace Ejercicio_2_Guía_3
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            btnQuitarCliente.Enabled = false;
+            btnDespachar1.Enabled = false;
             pictureBox1.Left = pictureBox1.Left + 5;
 
             if(pictureBox1.Left >= 100)
@@ -97,7 +97,7 @@ namespace Ejercicio_2_Guía_3
                 if (totalCajero1 == 0) pictureBox1.Location = new Point(68, 395);
                 timerCajero1Eliminar.Enabled = false;
             }
-            if (timerCajero1Eliminar.Enabled == false) btnQuitarCliente.Enabled = true;
+            if (timerCajero1Eliminar.Enabled == false) btnDespachar1.Enabled = true;
 
         }
 
@@ -159,6 +159,35 @@ namespace Ejercicio_2_Guía_3
             }
 
             if (timerCajero2Mover.Enabled == false) btnHacerFila2.Enabled = true;
+
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            if (totalCajero2 == 0) { }
+            else
+            {
+                timerCajero2Eliminar.Enabled = true;
+                totalCajero2--;
+            }
+        }
+
+        private void timerCajero2Eliminar_Tick(object sender, EventArgs e)
+        {
+            btnDespachar2.Enabled = false;
+            pictureBox6.Left = pictureBox6.Left + 5;
+
+            if (pictureBox6.Left >= 300)
+            {
+                pictureBox6.Left = 250;
+                if (totalCajero2 == 4) pictureBox10.Location = new Point(250, 417);
+                if (totalCajero2 == 3) pictureBox9.Location = new Point(250, 417);
+                if (totalCajero2 == 2) pictureBox8.Location = new Point(250, 417);
+                if (totalCajero2 == 1) pictureBox7.Location = new Point(250, 417);
+                if (totalCajero2 == 0) pictureBox6.Location = new Point(250, 417);
+                timerCajero2Eliminar.Enabled = false;
+            }
+            if (timerCajero2Eliminar.Enabled == false) btnDespachar2.Enabled = true;
 
         }
     }
